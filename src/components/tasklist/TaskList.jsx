@@ -42,7 +42,7 @@ const TaskList = () => {
           quibusdam itaque fuga?
         </p>
       </div>
-      <div className="flex-shrink-0 h-full  p-5 w-[349px] bg-yellow-400 rounded-xl">
+      <div className="flex-shrink-0 h-full p-5 w-[349px] bg-yellow-400 rounded-xl">
         <div className="flex justify-between text-sm items-center">
           <h3 className="bg-red-600 px-3 text-black  py-1 rounded-md">High</h3>
           <h4 className="text-black ">20 feb 2024</h4>
