@@ -1,8 +1,8 @@
 import React from "react";
-import AcceptTask from "./AcceptTask";
-import NewTask from "./NewTask";
-import FailedTask from "./FailedTask";
-import CompleteTask from "./CompleteTask";
+import AcceptTask from "./AcceptTask.jsx";
+import NewTask from "./NewTask.jsx";
+import FailedTask from "./FailedTask.jsx";
+import CompleteTask from "./CompleteTask.jsx";
 
 const TaskList = ({ data }) => {
   return (

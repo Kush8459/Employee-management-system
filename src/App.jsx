@@ -1,13 +1,13 @@
 import React, { useContext, useEffect, useState } from "react";
-import Login from "./components/Auth/Login";
-import EmployeeDashboard from "./components/Dashboard/EmployeeDashboard";
-import AdminDashboard from "./components/Dashboard/AdminDashboard";
-import { AuthContext } from "./context/AuthProvider";
+import Login from "./components/Auth/Login.jsx";
+import EmployeeDashboard from "./components/Dashboard/EmployeeDashboard.jsx";
+import AdminDashboard from "./components/Dashboard/AdminDashboard.jsx";
+import { AuthContext } from "./context/AuthProvider.jsx";
 
 const App = () => {
   const [user, setUser] = useState(null);
   const [loggedInUserData, setLoggedInUserData] = useState(null);
-  
+
   const [userData, setUserData] = useContext(AuthContext);
 
   useEffect(() => {
