@@ -11,7 +11,8 @@ const Header = (props) => {
 
   const logOutUser = () => {
     localStorage.setItem("loggedInUser", "");
-    window.location.reload();
+    props.changeUser("");
+    // window.location.reload();
   };
 
   return (
