@@ -1,24 +1,22 @@
 import React, { useState } from "react";
 
 const Header = (props) => {
-  const [userName, setUserName] = useState("");
-
-  // if (!props.firstName) {
-  //   setUserName("Admin");
-  // } else {
-  //   setUserName(props.firstName);
-  // }
-
   const logOutUser = () => {
     localStorage.setItem("loggedInUser", "");
     props.changeUser("");
-    // window.location.reload();
   };
 
   return (
     <div className="flex items-end justify-between ">
       <h1 className="text-2xl font-medium">
-        Hello <br /> <span className="text-3xl font-semibold">username 👋</span>
+        Hello <br />{" "}
+        {props.data.firstName ? (
+          <span className="text-3xl font-semibold">
+            {props.data.firstName} 👋
+          </span>
+        ) : (
+          <span className="text-3xl font-semibold">Admin 👋</span>
+        )}
       </h1>
       <button
         onClick={logOutUser}

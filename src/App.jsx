@@ -24,6 +24,7 @@ const App = () => {
     if (email == "admin@me.com" && password == "123") {
       setUser("admin");
       localStorage.setItem("loggedInUser", JSON.stringify({ role: "admin" }));
+      setLoggedInUserData(userData.data);
     } else if (userData) {
       const employee = userData.find(
         (e) => email == e.email && e.password == password
@@ -41,11 +42,12 @@ const App = () => {
     }
   };
 
+
   return (
     <>
       {!user ? <Login handleLogin={handleLogin} /> : ""}
       {user == "admin" ? (
-        <AdminDashboard changeUser={setUser} />
+        <AdminDashboard changeUser={setUser} data="Admin" />
       ) : user == "employee" ? (
         <EmployeeDashboard changeUser={setUser} data={loggedInUserData} />
       ) : null}
